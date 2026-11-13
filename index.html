@@ -1,31 +1,140 @@
 <!DOCTYPE html>
-<html lang="kk">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Командалық Жоба - Басты бет</title>
+    <title>Наша команда | GitHub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            width: 90%;
+            max-width: 700px;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .team {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .member {
+            background: #f5f5ff;
+            padding: 25px;
+            width: 230px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .member:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .avatar {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: #764ba2;
+            color: white;
+            font-size: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px;
+        }
+
+        .member h2 {
+            margin-bottom: 15px;
+        }
+
+        .member a {
+            display: inline-block;
+            text-decoration: none;
+            background: #24292e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .member a:hover {
+            background: #764ba2;
+        }
+
+        footer {
+            margin-top: 35px;
+            color: #999;
+            font-size: 13px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Командалық жобаның басты беті</h1>
 
-    <p>Қатысушылардың парақшаларына сілтемелер:</p>
+    <div class="container">
+        <h1>Наша команда</h1>
 
-    <ul>
-        <li>
-            <a href="favorite-hero.html">Менің бетім</a>
-        </li>
-        <li>
-            <a href="https://github.com/Mikaa456">Миканың GitHub парақшасы</a>
-        </li>
-    </ul>
+        <p class="description">
+            Добро пожаловать! Здесь представлены участники нашей команды.
+        </p>
 
-    <h2>Жоба қатысушылары</h2>
+        <div class="team">
 
-    <ul>
-        <li>kurassan10-bit</li>
-        <li>heavydast</li>
-    </ul>
+            <div class="member">
+                <div class="avatar">А</div>
+                <h2>Асем</h2>
+                <a href="https://github.com/heavydast"
+                   target="_blank">
+                    GitHub профиль
+                </a>
+            </div>
 
-</body>
-</html>
+            <div class="member">
+                <div class="avatar">К</div>
+                <h2>Каусар</h2>
+                <a href="https://github.com/kurassan10-bit"
+                   target="_blank">
+                    GitHub профиль
+                </a>
+            </div>
+
+        </div>
+
+        <footer>
+            © 2026 Наша команда | Git & GitHub
+        </footer>
+    </div>
+

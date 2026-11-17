@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дэдпул — Менің сүйікті кейіпкерім</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #171717;
+            color: white;
+        }
+
+        header {
+            background: #a80000;
+            text-align: center;
+            padding: 35px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #292929;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff3333;
+        }
+
+        .hero {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 25px;
+            background: #292929;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .hero img {
+            width: 320px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid #a80000;
+        }
+
+        .hero-info h2 {
+            color: #ff3333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        .hero-info p {
+            margin-bottom: 12px;
+        }
+
+        .section {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 25px;
+            background: #292929;
+            border-radius: 18px;
+        }
+
+        .section h2 {
+            color: #ff3333;
+            margin-bottom: 18px;
+        }
+
+        .section li {
+            line-height: 2;
+            margin-left: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            background: #3b2020;
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #ff5555;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: #a80000;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                flex-direction: column;
+                margin: 20px;
+            }
+
+            .hero img {
+                width: 100%;
+                height: 350px;
+            }
+
+            .section {
+                margin: 20px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>ДЭДПУЛ</h1>
+        <p>Аузына ие емес жалдамалы қаһарман | Marvel әлемі</p>
+    </header>
+
+    <nav>
+        <a href="#about">Кейіпкер туралы</a>
+        <a href="#abilities">Қабілеттері</a>
+        <a href="#personality">Мінезі</a>
+        <a href="#facts">Қызықты деректер</a>
+    </nav>
+
+    <div class="hero" id="about">
+
+        <img src="deadpool.jpg" alt="Дэдпул">
+
+        <div class="hero-info">
+            <h2>Дэдпул 🔴</h2>
+
+            <p>
+                Дэдпул — Marvel комикстерінің кейіпкері.
+                Оның шын есімі — Уэйд Уилсон.
+                Ол ерекше әзілдерімен, сарказмымен
+                және күтпеген әрекеттерімен танымал.
+            </p>
+
+            <p><b>Шын есімі:</b> Уэйд Уилсон</p>
+            <p><b>Лақап аты:</b> Дэдпул</p>
+            <p><b>Баспасы:</b> Marvel Comics</p>
+            <p><b>Алғашқы пайда болуы:</b> 1991 жыл</p>
+            <p><b>Лақап атауы:</b> Аузына ие емес жалдамалы</p>
+        </div>
+
+    </div>
+
+    <section class="section" id="abilities">
+        <h2>⚡ Қабілеттері</h2>
+
+        <ul>
+            <li>Жарақаттарының жылдам жазылуы.</li>
+            <li>Жоғары төзімділік.</li>
+            <li>Жекпе-жек өнерін жақсы меңгерген.</li>
+            <li>Әртүрлі қаруды қолдана алады.</li>
+            <li>Ауыр жарақаттарға төтеп бере алады.</li>
+        </ul>
+    </section>
+
+    <section class="section" id="personality">
+        <h2>🖤 Мінезі</h2>
+
+        <p>
+            Дэдпул — әзілқой, сөзшең және
+            болжауға келмейтін кейіпкер.
+            Ол тіпті маңызды жағдайлардың өзінде
+            әзілдеуді ұнатады. Өзінің ерекше
+            мінезіне қарамастан, жақындарына
+            қамқорлық танытып, оларға адал бола алады.
+        </p>
+    </section>
+
+    <section class="section" id="facts">
+        <h2>⭐ Қызықты деректер</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Әзілқойлығы</h3>
+                <p>Дэдпул үнемі әзіл айтып, сарказм қолданады.</p>
+            </div>
+
+            <div class="card">
+                <h3>Төртінші қабырға</h3>
+                <p>Ол көрермендерге тікелей сөйлей алады.</p>
+            </div>
+
+            <div class="card">
+                <h3>Сүйікті тағамы</h3>
+                <p>Дэдпул таконы жақсы көреді.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>❤️ Неліктен маған Дэдпул ұнайды?</h2>
+
+        <p>
+            Маған Дэдпул өзінің ерекше мінезімен,
+            әзілқойлығымен және қайталанбас
+            ерекшелігімен ұнайды. Ол басқа
+            суперқаһармандардан өзгеше, себебі
+            өзін тым байсалды ұстамайды.
+            Оның сарказмы мен күтпеген әрекеттері
+            кейіпкерді қызықты әрі есте қаларлық етеді.
+        </p>
+    </section>
+
+    <footer>
+        <h3>ДЭДПУЛ ❤️</h3>
+        <p>© 2026 | Менің сүйікті Marvel кейіпкерім</p>
+    </footer>
+
+</body>
+</html>

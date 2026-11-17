@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Біздің команда | Our Team</title>
+    <title>Біздің команда</title>
 
     <style>
         * {
@@ -14,38 +14,72 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #17152e, #34245c, #60418a);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
-            padding: 20px;
+            color: white;
+            padding: 30px 15px;
         }
 
         .container {
-            background: white;
-            width: 90%;
-            max-width: 750px;
-            padding: 40px;
-            border-radius: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 55px 20px 40px;
         }
 
-        h1 {
-            color: #333;
+        .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 9px 18px;
+            border-radius: 30px;
+            color: #d9c7ff;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
             margin-bottom: 15px;
         }
 
-        h2 {
-            margin-bottom: 15px;
+        header h1 span {
+            color: #c7a5ff;
         }
 
-        .description {
-            color: #777;
-            margin-bottom: 30px;
-            line-height: 1.6;
+        header p {
+            color: #d0c9df;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .project {
+            background: rgba(255,255,255,0.09);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 28px;
+            text-align: center;
+            margin-bottom: 45px;
+            backdrop-filter: blur(10px);
+        }
+
+        .project h2 {
+            margin-bottom: 15px;
+            color: #d9c1ff;
+        }
+
+        .project p {
+            color: #e0dbea;
+            line-height: 1.7;
+        }
+
+        .group {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 27px;
         }
 
         .team {
@@ -56,121 +90,98 @@
         }
 
         .member {
-            background: #f5f5ff;
-            padding: 25px;
-            width: 230px;
-            border-radius: 15px;
+            background: #fff;
+            color: #29213b;
+            width: 300px;
+            padding: 32px 25px;
+            border-radius: 22px;
+            text-align: center;
             transition: 0.3s;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
         }
 
         .member:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: translateY(-10px);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.3);
         }
 
         .avatar {
-            width: 75px;
-            height: 75px;
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
             border-radius: 50%;
-            background: #764ba2;
-            color: white;
-            font-size: 28px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto 15px;
-        }
-
-        .member h2 {
-            margin-bottom: 15px;
-        }
-
-        button {
-            border: none;
-            cursor: pointer;
-            background: #24292e;
+            font-size: 35px;
+            font-weight: bold;
             color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 14px;
+        }
+
+        .asem {
+            background: linear-gradient(135deg, #ff657a, #a52c58);
+        }
+
+        .kausar {
+            background: linear-gradient(135deg, #55c99b, #267e91);
+        }
+
+        .member h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .member p {
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .character {
+            display: inline-block;
+            background: #f0eaff;
+            color: #7045a5;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        .member a {
+            display: block;
+            background: linear-gradient(135deg, #7651b5, #a16bd0);
+            color: white;
+            text-decoration: none;
+            padding: 13px;
+            border-radius: 10px;
+            font-weight: bold;
             transition: 0.3s;
         }
 
-        button:hover {
-            background: #764ba2;
-            transform: scale(1.05);
-        }
-
-        .details {
-            display: none;
-            background: #f5f5ff;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 20px;
-            text-align: left;
-            animation: appear 0.4s ease;
-        }
-
-        .details h2 {
-            color: #764ba2;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .details p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .back-button {
-            display: block;
-            margin: 25px auto 0;
-            background: #764ba2;
-        }
-
-        .back-button:hover {
-            background: #24292e;
-        }
-
-        .project {
-            background: #f5f5ff;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            line-height: 1.6;
+        .member a:hover {
+            background: linear-gradient(135deg, #58368e, #8050b4);
         }
 
         footer {
-            margin-top: 35px;
-            color: #999;
-            font-size: 13px;
-        }
-
-        @keyframes appear {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            text-align: center;
+            color: #c5bad6;
+            margin-top: 55px;
+            padding: 20px;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.15);
         }
 
         @media (max-width: 600px) {
-            .container {
-                padding: 25px 15px;
+            header h1 {
+                font-size: 34px;
             }
 
-            .team {
-                flex-direction: column;
-                align-items: center;
+            header p {
+                font-size: 15px;
             }
 
             .member {
                 width: 100%;
-                max-width: 280px;
+                max-width: 330px;
             }
         }
     </style>
@@ -180,135 +191,77 @@
 
     <div class="container">
 
-        <!-- БАСТЫ БЕТ -->
-        <div id="mainPage">
+        <header>
+            <div class="tag">✦ БІЗДІҢ ШАҒЫН ЖОБАМЫЗ ✦</div>
 
-            <h1>Біздің команда</h1>
-
-            <p class="description">
-                Қош келдіңіз! Біздің команда мүшелерімен танысыңыз.
-            </p>
-
-            <!-- Жоба туралы -->
-            <div class="project">
-                <h2>Жоба туралы</h2>
-
-                <p>
-                    Біздің жобаның мақсаты – команда мүшелерін
-                    таныстыру және олардың мамандықтары туралы
-                    ақпарат беру.
-                </p>
-
-                <p><strong>Топ:</strong> П-25-72гб</p>
-            </div>
-
-            <!-- Қатысушылар -->
-            <h2>Жобаға қатысушылар</h2>
-
-            <div class="team">
-
-                <!-- АСЕМ -->
-                <div class="member">
-
-                    <div class="avatar">А</div>
-
-                    <h2>Асем</h2>
-
-                    <button onclick="showPage('asemPage')">
-                        Асем туралы
-                    </button>
-
-                </div>
-
-                <!-- КӘУСЕР -->
-                <div class="member">
-
-                    <div class="avatar">К</div>
-
-                    <h2>Кәусaр</h2>
-
-                    <button onclick="showPage('kausarPage')">
-                        Кәусaр туралы
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- АСЕМНІҢ ЖЕКЕ БЕТІ -->
-        <div id="asemPage" class="details">
-
-            <div class="avatar">А</div>
-
-            <h2>Асем туралы ақпарат</h2>
-
-            <p><strong>Аты-жөні:</strong> Асем</p>
-
-            <p><strong>Мамандығы:</strong> Бағдарламалаушы</p>
-
-            <p><strong>Тобы:</strong> П-25-72гб</p>
+            <h1>Біздің <span>команда</span></h1>
 
             <p>
-                <strong>Жобаға қатысуы:</strong>
-                Сайтты әзірлеуге, ақпараттарды орналастыруға
-                және командалық жұмысқа қатысады.
+                Қош келдіңіз! Бізбен бірге танысып,
+                әр қатысушының қызығушылықтары мен
+                сүйікті кейіпкерлерін біліңіз.
             </p>
+        </header>
 
-            <button class="back-button" onclick="showPage('mainPage')">
-                ← Басты бетке қайту
-            </button>
-
-        </div>
-
-        <!-- КӘУСЕРДІҢ ЖЕКЕ БЕТІ -->
-        <div id="kausarPage" class="details">
-
-            <div class="avatar">К</div>
-
-            <h2>Кәусaр туралы ақпарат</h2>
-
-            <p><strong>Аты-жөні:</strong> Кәусaр</p>
-
-            <p><strong>Мамандығы:</strong> Бағдарламалаушы</p>
-
-            <p><strong>Тобы:</strong> П-25-72гб</p>
+        <section class="project">
+            <h2>✧ Жоба туралы ✧</h2>
 
             <p>
-                <strong>Жобаға қатысуы:</strong>
-                Сайттың дизайнын жасауға, HTML және CSS
-                кодтарын жазуға және жобаны дамытуға қатысады.
+                Біздің жобаның мақсаты – команда мүшелерін
+                таныстыру, олардың қызығушылықтары мен
+                сүйікті кейіпкерлері туралы ақпарат беру.
             </p>
 
-            <button class="back-button" onclick="showPage('mainPage')">
-                ← Басты бетке қайту
-            </button>
+            <br>
+
+            <p><strong>Топ: П-25-72гб</strong></p>
+        </section>
+
+        <h2 class="group">Команда қатысушылары</h2>
+
+        <div class="team">
+
+            <div class="member">
+                <div class="avatar asem">А</div>
+
+                <h3>Асем</h3>
+
+                <p>Команда қатысушысы</p>
+
+                <div class="character">
+                    ❤ Сүйікті кейіпкері: Дэдпул
+                </div>
+
+                <a href="Asem-favorite-hero.html">
+                    Кейіпкерімен танысу →
+                </a>
+            </div>
+
+            <div class="member">
+                <div class="avatar kausar">К</div>
+
+                <h3>Кәусар</h3>
+
+                <p>Команда қатысушысы</p>
+
+                <div class="character">
+                    ❤ Сүйікті кейіпкері: Асуи Цую
+                </div>
+
+                <a href="Kausar-favorite-hero.html">
+                    Кейіпкерімен танысу →
+                </a>
+            </div>
 
         </div>
 
         <footer>
             © 2026 Біздің команда | П-25-72гб
+            <br><br>
+            Бір команда — ортақ мақсат!
         </footer>
 
     </div>
-
-    <!-- JAVASCRIPT -->
-    <script>
-
-        function showPage(pageId) {
-
-            document.getElementById("mainPage").style.display = "none";
-
-            document.getElementById("asemPage").style.display = "none";
-
-            document.getElementById("kausarPage").style.display = "none";
-
-            document.getElementById(pageId).style.display = "block";
-
-        }
-
-    </script>
 
 </body>
 </html>

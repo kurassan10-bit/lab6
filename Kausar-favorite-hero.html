@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Асуи Цую — Менің сүйікті кейіпкерім</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #e9f5ec;
+            color: #203c2b;
+        }
+
+        header {
+            background: #174b35;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #286b49;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #b7f5c5;
+        }
+
+        .hero {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px #b5d4bd;
+        }
+
+        .hero img {
+            width: 320px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .hero-info h2 {
+            color: #237348;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .hero-info p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .section {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px #c5ddca;
+        }
+
+        .section h2 {
+            color: #237348;
+            margin-bottom: 15px;
+        }
+
+        .section p, .section li {
+            line-height: 1.8;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            background: #e4f4e8;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #237348;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #174b35;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                flex-direction: column;
+                margin: 20px;
+            }
+
+            .hero img {
+                width: 100%;
+                height: 350px;
+            }
+
+            .section {
+                margin: 20px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Менің сүйікті кейіпкерім</h1>
+        <p>Менің қаһарман академиям — Асуи Цую</p>
+    </header>
+
+    <nav>
+        <a href="#about">Кейіпкер туралы</a>
+        <a href="#abilities">Қабілеттері</a>
+        <a href="#personality">Мінезі</a>
+        <a href="#facts">Қызықты деректер</a>
+    </nav>
+
+    <div class="hero" id="about">
+
+        <img src="tsuyu.jpg" alt="Асуи Цую">
+
+        <div class="hero-info">
+            <h2>Асуи Цую (Фроппи) 🐸</h2>
+
+            <p>
+                Асуи Цую — «Менің қаһарман академиям»
+                анимесіндегі Юэй академиясының
+                1-А сыныбында оқитын оқушы.
+            </p>
+
+            <p>
+                Оның қаһармандық есімі — Фроппи.
+                Ол болашақта кәсіби қаһарман болып,
+                адамдарға көмектесуді армандайды.
+            </p>
+
+            <p><b>Жасы:</b> 15–16 жас</p>
+            <p><b>Сыныбы:</b> 1-А</p>
+            <p><b>Қаһармандық есімі:</b> Фроппи</p>
+            <p><b>Қабілеті:</b> Бақа ерекшеліктері</p>
+        </div>
+    </div>
+
+    <section class="section" id="abilities">
+        <h2>🐸 Қабілеттері</h2>
+
+        <p>Цуюдің ерекше қабілеттері:</p>
+
+        <ul>
+            <li>Өте биікке секіре алады.</li>
+            <li>Суда жылдам жүзе алады.</li>
+            <li>Тік қабырғаларға жабыса алады.</li>
+            <li>Ұзын әрі күшті тілі бар.</li>
+            <li>Жасырынуға және байқалмай жүруге қабілетті.</li>
+        </ul>
+    </section>
+
+    <section class="section" id="personality">
+        <h2>💚 Мінезі</h2>
+
+        <p>
+            Цую — сабырлы, адал және жауапкершілігі мол
+            қыз. Ол қиын жағдайларда да сабыр сақтайды.
+            Достарына көмектесуге және жақындарына
+            қамқор болуға әрдайым дайын. Сонымен қатар
+            ол байқағыш әрі ақылды.
+        </p>
+    </section>
+
+    <section class="section" id="facts">
+        <h2>⭐ Қызықты деректер</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Сүйікті ісі</h3>
+                <p>Жүзу және суда демалу.</p>
+            </div>
+
+            <div class="card">
+                <h3>Лақап аты</h3>
+                <p>Достары оны Цую деп атайды.</p>
+            </div>
+
+            <div class="card">
+                <h3>Ерекшелігі</h3>
+                <p>Сөйлегенде «керо» сөзін жиі қолданады.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>💚 Неліктен ол менің сүйікті кейіпкерім?</h2>
+
+        <p>
+            Маған Асуи Цую ұнайды, себебі ол мейірімді,
+            сабырлы, ақылды және сенімді кейіпкер.
+            Ол қиындықтардан қорықпайды және достарына
+            әрдайым қолдау көрсетеді. Оның ерекше
+            қабілеті мен өзіндік мінезі оны қызықты
+            кейіпкер етеді.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 | Менің сүйікті кейіпкерім — Асуи Цую</p>
+        <p>Менің қаһарман академиям 💚</p>
+    </footer>
+
+</body>
+</html>

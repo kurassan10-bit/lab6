@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наша команда | GitHub</title>
+    <title>Біздің команда | Our Team</title>
 
     <style>
         * {
@@ -20,12 +20,13 @@
             justify-content: center;
             align-items: center;
             color: #333;
+            padding: 20px;
         }
 
         .container {
             background: white;
             width: 90%;
-            max-width: 700px;
+            max-width: 750px;
             padding: 40px;
             border-radius: 20px;
             text-align: center;
@@ -37,9 +38,14 @@
             margin-bottom: 15px;
         }
 
+        h2 {
+            margin-bottom: 15px;
+        }
+
         .description {
             color: #777;
             margin-bottom: 30px;
+            line-height: 1.6;
         }
 
         .team {
@@ -79,18 +85,59 @@
             margin-bottom: 15px;
         }
 
-        .member a {
-            display: inline-block;
-            text-decoration: none;
+        button {
+            border: none;
+            cursor: pointer;
             background: #24292e;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border-radius: 8px;
+            font-size: 14px;
             transition: 0.3s;
         }
 
-        .member a:hover {
+        button:hover {
             background: #764ba2;
+            transform: scale(1.05);
+        }
+
+        .details {
+            display: none;
+            background: #f5f5ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+            text-align: left;
+            animation: appear 0.4s ease;
+        }
+
+        .details h2 {
+            color: #764ba2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .details p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: block;
+            margin: 25px auto 0;
+            background: #764ba2;
+        }
+
+        .back-button:hover {
+            background: #24292e;
+        }
+
+        .project {
+            background: #f5f5ff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
 
         footer {
@@ -98,43 +145,170 @@
             color: #999;
             font-size: 13px;
         }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 15px;
+            }
+
+            .team {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .member {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-
     <div class="container">
-        <h1>Наша команда</h1>
 
-        <p class="description">
-            Добро пожаловать! Здесь представлены участники нашей команды.
-        </p>
+        <!-- БАСТЫ БЕТ -->
+        <div id="mainPage">
 
-        <div class="team">
+            <h1>Біздің команда</h1>
 
-            <div class="member">
-                <div class="avatar">А</div>
-                <h2>Асем</h2>
-                <a href="https://github.com/heavydast"
-                   target="_blank">
-                    GitHub профиль
-                </a>
+            <p class="description">
+                Қош келдіңіз! Біздің команда мүшелерімен танысыңыз.
+            </p>
+
+            <!-- Жоба туралы -->
+            <div class="project">
+                <h2>Жоба туралы</h2>
+
+                <p>
+                    Біздің жобаның мақсаты – команда мүшелерін
+                    таныстыру және олардың мамандықтары туралы
+                    ақпарат беру.
+                </p>
+
+                <p><strong>Топ:</strong> П-25-72гб</p>
             </div>
 
-            <div class="member">
-                <div class="avatar">К</div>
-                <h2>Каусар</h2>
-                <a href="https://github.com/kurassan10-bit"
-                   target="_blank">
-                    GitHub профиль
-                </a>
+            <!-- Қатысушылар -->
+            <h2>Жобаға қатысушылар</h2>
+
+            <div class="team">
+
+                <!-- АСЕМ -->
+                <div class="member">
+
+                    <div class="avatar">А</div>
+
+                    <h2>Асем</h2>
+
+                    <button onclick="showPage('asemPage')">
+                        Асем туралы
+                    </button>
+
+                </div>
+
+                <!-- КӘУСЕР -->
+                <div class="member">
+
+                    <div class="avatar">К</div>
+
+                    <h2>Кәусaр</h2>
+
+                    <button onclick="showPage('kausarPage')">
+                        Кәусaр туралы
+                    </button>
+
+                </div>
+
             </div>
 
         </div>
 
+        <!-- АСЕМНІҢ ЖЕКЕ БЕТІ -->
+        <div id="asemPage" class="details">
+
+            <div class="avatar">А</div>
+
+            <h2>Асем туралы ақпарат</h2>
+
+            <p><strong>Аты-жөні:</strong> Асем</p>
+
+            <p><strong>Мамандығы:</strong> Бағдарламалаушы</p>
+
+            <p><strong>Тобы:</strong> П-25-72гб</p>
+
+            <p>
+                <strong>Жобаға қатысуы:</strong>
+                Сайтты әзірлеуге, ақпараттарды орналастыруға
+                және командалық жұмысқа қатысады.
+            </p>
+
+            <button class="back-button" onclick="showPage('mainPage')">
+                ← Басты бетке қайту
+            </button>
+
+        </div>
+
+        <!-- КӘУСЕРДІҢ ЖЕКЕ БЕТІ -->
+        <div id="kausarPage" class="details">
+
+            <div class="avatar">К</div>
+
+            <h2>Кәусaр туралы ақпарат</h2>
+
+            <p><strong>Аты-жөні:</strong> Кәусaр</p>
+
+            <p><strong>Мамандығы:</strong> Бағдарламалаушы</p>
+
+            <p><strong>Тобы:</strong> П-25-72гб</p>
+
+            <p>
+                <strong>Жобаға қатысуы:</strong>
+                Сайттың дизайнын жасауға, HTML және CSS
+                кодтарын жазуға және жобаны дамытуға қатысады.
+            </p>
+
+            <button class="back-button" onclick="showPage('mainPage')">
+                ← Басты бетке қайту
+            </button>
+
+        </div>
+
         <footer>
-            © 2026 Наша команда | Git & GitHub
+            © 2026 Біздің команда | П-25-72гб
         </footer>
+
     </div>
 
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function showPage(pageId) {
+
+            document.getElementById("mainPage").style.display = "none";
+
+            document.getElementById("asemPage").style.display = "none";
+
+            document.getElementById("kausarPage").style.display = "none";
+
+            document.getElementById(pageId).style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+</html>
